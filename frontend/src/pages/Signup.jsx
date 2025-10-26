@@ -28,7 +28,7 @@ export default function Signup() {
 
     try {
       setLoading(true);
-      await api.post("/auth/register", form);
+      await api.post("/auth/signup", form);
       setAlert({ open: true, message: "Signup successful!", severity: "success" });
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
